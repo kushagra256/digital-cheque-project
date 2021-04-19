@@ -1,0 +1,231 @@
+<html>
+<head>
+<link rel="icon" href="ru.png">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="sign.js"></script>
+<script>
+         $(document).ready(function()
+        {
+            $('#myCanvas').sign({
+                resetButton: $('#resetSign'),
+                lineWidth: 2,
+                height:80,
+                width:200
+            });
+        });
+</script>
+<style>        
+body{
+	background-size:100% 100%;	
+	background-repeat: repeat-y;
+	background-size: cover;
+	background-image:url('images.jpg');
+	
+}
+#myCanvas
+{
+            border-bottom:5px solid black;
+            border-radius: 4px;
+            background-color: crimson;         
+
+}
+
+
+.main
+{
+	border: 5px solid grey;
+	width:900px;
+	margin: 1% auto; 
+	background-color: white;
+	border-radius: 10px;
+	height: 500px;
+}
+.date
+{   height: 50px;
+	width: 180px;
+	float:right;
+	padding-right: 30px;
+	border:0px white;
+	padding-top: 10px;
+	outline: 0;
+	font-family: Georgia;
+	font-size: 15px;	
+
+}
+.cheque
+{
+	border: 1px white;
+	width:900px;
+	margin:1% auto;	
+	height: 350px;
+	background-color: crimson;
+
+}
+.image
+{
+  width:150px;
+  height: 70px;
+}
+.input1{
+	background-color: crimson;
+	margin-left: 25px;
+	width:300px;	
+}
+.input11{
+	width:770px;
+	height:30px;
+	border-top:2px crimson;
+	border-right: 2px crimson;
+	border-left: 2px crimson;
+	background-color: crimson;
+	outline: 0;
+	margin-left: 60px;
+	margin-top: -14px;
+	font-size: 20px;
+	font-family: Georgia;
+	text-transform:uppercase; 
+	
+	}
+.input21{
+	clear:both;
+	width:770px;
+	height:30px;
+	border-top:2px crimson;
+	border-right: 2px crimson;
+	border-left: 2px crimson;
+	background-color: crimson;
+	outline: 0;
+	margin-left: 60px;
+	margin-top: 4px;
+	font-size: 20px;
+	font-family: Georgia;
+	text-transform: uppercase;
+	
+	}
+
+.input31{
+	
+	width:200px;
+	height:60px;
+	border:2px solid grey;
+	background-color: crimson;
+	outline: 0;
+	margin-left: 625px;
+	margin-top: 40px;
+	border-radius: 10px;
+
+	}
+.amount
+{
+	background-color: crimson;
+	width:120px;
+	height:40px;
+	font-size: 30px;
+	font-family: Georgia;
+	border-top:2px crimson;
+	border-right: 2px crimson;
+	border-left: 2px crimson;
+	border-bottom: 2px crimson;
+	clear:both;
+	outline:0;
+
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 25px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: #111;
+}
+.button
+{  
+	margin-top:100px;
+    width: 100px;
+    height:50px;    
+    border-radius: 5px;
+    margin-bottom: 300px;
+    margin-right: 10px;
+}
+.button1
+{
+    margin-top: 100px;
+    width: 100px;
+    height:50px;
+    border-radius: 5px;
+    margin-bottom: 300px;
+    margin-left: 10px;
+}
+
+
+</style>
+
+</head>
+<body oncontextmenu="return false">
+	<ul>
+		<li><a href="index2.html">INTRO</a></li>
+		<li><a href="chequeg.html ">CHEQUEGENERATION</a></li>
+		<li><a href="chequed.html">CHEQUEDROP</a></li>
+		<li><a href=" ">DETAILS</a></li>
+		
+	</ul>
+<h1 style="color:white"><center> <b> CHEQUE</b></center></h1>
+<div id="heading">
+<div class="main">
+<input type ="date" class="date" >
+<img src="RUP.png" class="image" >
+<div class="cheque">
+<div class="input1" ><br>
+<label style="color:black;float:left;"><b>PAY</b></label>
+<input type="text" class="input11" name="username" required ></br><br>
+<label style="color:black;float:left;"><b>AMOUNT(in words)</b></label>
+<input type="text" class="input21"  name="amount" required >
+<br>
+<label style="color:black;float:right;"><b>PLEASE ENTER THE AMOUNT IN FIGURE:</b></label>
+<div class="input31">	
+<span style="font-size:50px">&#8377;</span>	
+<input type="text" class="amount" name="amount"><span style="font-size:40px">&#8725;</span><span style="font-size:40px">&#8722;</span></div>
+<label style="color:black;float:left;"><b>PLEASE SIGN BELOW:</b></label>
+<div class="container">        
+<canvas id="myCanvas"></canvas>    
+</div>	
+</div>
+<button onclick="myFunction()" class="button"><b>GENERATE PDF</b></button>
+<button onclick="window.print()" class="button1"><b>GENERATE PRINT</b></button>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+<script>
+var div = document.querySelector("#heading");
+function myFunction()
+{
+		var imgData;
+		
+		html2canvas(div,{
+			useCORS:true,
+			onrendered:function(canvas)
+			{
+              imgData = canvas.toDataURL('image/png')
+              var doc = new jsPDF('l','mm','a4')
+              doc.addImage(imgData,'PNG',-50,5)
+              doc.save("project26.pdf")
+			}
+
+		});
+}
+</script>
+</html>

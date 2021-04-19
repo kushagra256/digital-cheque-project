@@ -1,0 +1,123 @@
+<html>
+<head>
+<link rel="icon" href="ru.png">
+<style>        
+body{
+	background-size:100% 100%;	
+	background-repeat: repeat-y;
+	background-size: cover;
+	background-image:url(images.jpg);
+	
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 25px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: #111;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  
+  
+  filter: blur(1px);
+  -webkit-filter: blur(1px);  
+  height: 600px;  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  
+  }
+.bg-text {
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0, 0.5); 
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 50%;
+  padding: 20px;
+  text-align: center;
+}
+.choice
+{
+    border-radius:  2px; 
+}
+.choice1 {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+  border: none;  
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.choice1:hover {
+  background-color: #555555;
+  color: white;
+}
+label
+{
+	display:inline-block;
+	padding:0.5rem;
+	font-family:sans-serif;
+	border-radius:0.3rem;
+	cursor:pointer;
+	margin-top:1rem;
+}
+</style>
+
+</head>
+<body oncontextmenu="return false">
+	<ul>
+		<li><a href="index2.html">INTRO</a></li>
+		<li><a href="chequeg.html ">CHEQUEGENERATION</a></li>
+		<li><a href="chequed.html">CHEQUEDROP</a></li>
+		<li><a href=" ">DETAILS</a></li>
+		
+	</ul>
+	<h1 style="color:white"><center> <b>DROPBOX</b></center></h1>
+	<div class="bg-image"></div>   
+       <div class="bg-text">
+            <h1>PLEASE DROP YOUR CHEQUE BELOW</h1>
+            <br>
+            <br>
+            <input type="file" id="actual-btn" >
+            
+            <br>
+            <br>
+            <input type="submit" value="UPLOAD THE CHEQUE" name="submit" class="choice1">
+        </div>			
+			
+</body>
+</html>	
+
